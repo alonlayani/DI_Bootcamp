@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  user-select: none; /* avoid selecting text while dragging */
+}
+
+.game {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+#palette {
+  display: grid;
+  grid-template-columns: repeat(3, 40px);
+  gap: 6px;
+}
+
+.color {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 2px solid #ccc;
+}
+
+.color.selected {
+  border: 3px solid black;
+}
+
+#current {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  border: 1px solid #333;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(40, 15px);
+  grid-auto-rows: 15px;
+  border: 1px solid #999;
+  cursor: crosshair;
+}
+
+.square {
+  background: white;
+  border: 1px solid #eee;
+}
