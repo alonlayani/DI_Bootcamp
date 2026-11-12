@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Week 3 - Day 4 - Exercises XP : Animations</title>
+  <style>
+    p {
+      background: yellow;
+      color: red;
+    }
+    #boxContainer {
+      width: 400px;
+      height: 400px;
+      position: relative;
+      background: yellow;
+    }
+    #animate {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <!-- Exercise 1 : Timer -->
+  <div id="container"></div>
+  <button id="clear">Clear Interval</button>
+
+  <hr>
+
+  <!-- Exercise 2 : Move the box -->
+  <p><button onclick="myMove()">Click Me</button></p>
+  <div id="boxContainer">
+    <div id="animate"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
