@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.card {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+#taskInput {
+  flex: 1;
+  padding: 8px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.task .delete {
+  border: none;
+  background: none;
+  color: #c0392b;
+  font-size: 16px;
+}
+
+.task.done label {
+  color: red;
+  text-decoration: line-through;
+}
