@@ -1,7 +1,4 @@
-// ==========================================================
-// Week 4 - Day 2 - Daily Challenge : Groceries
-// ==========================================================
-
+// Daily challenge: Groceries
 let client = "John";
 
 const groceries = {
@@ -14,37 +11,27 @@ const groceries = {
   },
 };
 
-// 1. displayGroceries
 const displayGroceries = () => {
   groceries.fruits.forEach((fruit) => console.log(fruit));
 };
 
-displayGroceries();
-
-// 2. cloneGroceries
 const cloneGroceries = () => {
-  // user is a copy of client
   let user = client;
-
   client = "Betty";
-  console.log(user); // "John"
-  // No, we won't see the modification in user.
-  // Strings are primitive types: they are passed BY VALUE.
-  // user received a copy of the value "John", it is not linked to client.
+  console.log(user, client); // John Betty
+  // No: strings are primitives, they are copied BY VALUE.
+  // user got its own copy of "John", so changing client doesn't affect user.
 
-  // shopping points to the same object as groceries
   const shopping = groceries;
-
   groceries.totalPrice = "35$";
-  console.log(shopping.totalPrice); // "35$"
-  // Yes, we see the modification in shopping.
-  // Objects are passed BY REFERENCE: shopping and groceries are two names
-  // for the same object in memory.
+  console.log(shopping.totalPrice); // 35$
+  // Yes: objects are copied BY REFERENCE. shopping and groceries point
+  // to the same object in memory, so a change through one is seen by the other.
 
   groceries.other.paid = false;
   console.log(shopping.other.paid); // false
-  // Yes, for the same reason: the nested object `other` is also shared
-  // through the same reference.
+  // Yes: same reason — `other` is a nested object inside the same shared object.
 };
 
+displayGroceries();
 cloneGroceries();
