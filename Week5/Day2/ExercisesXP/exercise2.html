@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 2 - HTML Form (POST)</title>
+</head>
+<body>
+  <!-- Exercise 2 : the form is submitted with the POST method -->
+  <form action="exercise2.html" method="post">
+    <label for="name">Name</label><br>
+    <input type="text" id="name" name="name" size="20"><br><br>
+    <label for="message">Message</label><br>
+    <textarea id="message" name="message" rows="6" cols="40"></textarea><br><br>
+    <input type="submit" value="Send">
+  </form>
+
+  <!--
+    Where does the sent data appear?
+    With POST, the data is NOT in the URL. It is sent in the BODY of the HTTP request.
+    You can see it in DevTools > Network tab > click the request > "Payload" (Form Data):
+    name: John
+    message: Hello world
+    (A static file server may answer 405 Method Not Allowed, but the payload is still visible.)
+  -->
+</body>
+</html>
