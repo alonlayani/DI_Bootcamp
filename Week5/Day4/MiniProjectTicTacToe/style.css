@@ -1,0 +1,12 @@
+body { font-family: Arial, sans-serif; text-align: center; background: #1e1e2f; color: #fff; margin: 0; padding: 20px; }
+h1 { letter-spacing: 3px; }
+button { padding: 10px 20px; margin: 4px; font-size: 1rem; border: none; border-radius: 6px; cursor: pointer;
+         background: #3a3a5c; color: #fff; }
+button:hover, button.selected { background: #6c63ff; }
+#board { display: grid; grid-template-columns: repeat(3, 100px); grid-template-rows: repeat(3, 100px);
+         gap: 6px; justify-content: center; margin: 25px auto; }
+.cell { background: #2c2c44; border-radius: 8px; display: flex; align-items: center; justify-content: center;
+        font-size: 3rem; font-weight: bold; cursor: pointer; user-select: none; }
+.cell:hover { background: #38385a; }
+.cell.win { background: #2e7d32; }
+#message { font-size: 1.3rem; min-height: 1.6em; }
