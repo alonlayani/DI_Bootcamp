@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Quote Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Random Quote Generator</h1>
+
+    <!-- Part 1 -->
+    <section id="quote-section">
+      <p class="placeholder">Click "Generate Quote" to start</p>
+    </section>
+    <button id="generate-btn">Generate Quote</button>
+
+    <!-- Part 2 : stats + like buttons -->
+    <div class="actions">
+      <button id="chars-with-spaces">Characters (with spaces)</button>
+      <button id="chars-no-spaces">Characters (no spaces)</button>
+      <button id="words-btn">Words</button>
+      <button id="like-btn">👍 Like</button>
+    </div>
+    <p id="info"></p>
+
+    <!-- Part 2 : add a quote -->
+    <form id="add-form">
+      <h2>Add a quote</h2>
+      <input type="text" id="new-quote" placeholder="Quote" required>
+      <input type="text" id="new-author" placeholder="Author" required>
+      <button type="submit">Add quote</button>
+    </form>
+
+    <!-- Part 3 : filter by author -->
+    <form id="filter-form">
+      <h2>Filter by author</h2>
+      <input type="text" id="filter-author" placeholder="Author name" required>
+      <button type="submit">Filter</button>
+    </form>
+    <section id="filter-section"></section>
+    <div class="actions" id="nav-buttons" hidden>
+      <button id="prev-btn">Previous</button>
+      <button id="next-btn">Next</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
